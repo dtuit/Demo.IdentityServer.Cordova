@@ -31,7 +31,7 @@ angular.module("app", ['ngOidcTokenManager'])
                 alert(err)
             });
         }
-        
+                
         $scope.logout = function (){
             ngTokenManager.redirectForLogoutCordova();
         }
@@ -58,5 +58,8 @@ angular.module("app", ['ngOidcTokenManager'])
             $scope.access_token_display = refresh_access_token_display()
         },100);
         
+        ngTokenManager.subscribeTo.tokenObtained($scope, function(){
+            console.log("[ngTokenManager] token obtained callback")
+        })
         
     });

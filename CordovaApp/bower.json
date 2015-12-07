@@ -1,7 +1,6 @@
 {
   "name": "CordovaApp",
   "dependencies": {
-    "angular": "1.4.8",
     "ionic": "driftyco/ionic-bower#v1.1.1"
   },
   "overrides": {

@@ -8707,7 +8707,7 @@ function TokenManager(settings) {
             }
         }
     });
-    
+
     var mgr = this;
     loadToken(mgr);
     if (mgr._settings.store instanceof window.localStorage.constructor) {
@@ -8893,7 +8893,6 @@ TokenManager.prototype.redirectForTokenCordova = function (browserSettings) {
     });
 }
 
-
 TokenManager.prototype.redirectForLogout = function () {
     var mgr = this;
     mgr.oidcClient.createLogoutRequestAsync(mgr.id_token).then(function (url) {
@@ -8919,7 +8918,6 @@ TokenManager.prototype.redirectForLogoutCordova = function (browserSettings) {
     });
 }
 
-
 TokenManager.prototype.processTokenCallbackAsync = function (queryString) {
     var mgr = this;
     return mgr.oidcClient.processResponseAsync(queryString).then(function (token) {
@@ -8939,6 +8937,7 @@ TokenManager.prototype.renewTokenSilentAsync = function () {
     }
 
     var settings = copy(mgr._settings);
+    settings.redirect_uri = settings.silent_redirect_uri;
     settings.prompt = "none";
 
     var oidc = new OidcClient(settings);
@@ -8988,7 +8987,6 @@ TokenManager.prototype.renewTokenSilentAsyncCordova = function(){
         })
     });
 }
-
 
 TokenManager.prototype.processTokenCallbackSilent = function (hash) {
     if (window.parent && window !== window.parent) {
