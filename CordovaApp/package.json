@@ -1,0 +1,10 @@
+{
+  "name": "CordovaApp",
+  "version": "1.0.0",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "gulp": "3.9.0",
+    "main-bower-files": "2.9.0"
+  }
+}
