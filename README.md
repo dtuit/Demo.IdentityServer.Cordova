@@ -5,8 +5,8 @@ A Demo [Cordova](https://cordova.apache.org/) app configured to use [IdentitySer
 
 #### Note
 
- - added method [redirectForTokenCordova()]() so oidc-token-manager can use InAppBrowser
- - [angular wrapper]() for oidc-token-manager
+ - check out the modifications to oidc-token-manager on my [here](https://github.com/dtuit/oidc-token-manager/tree/cordova) 
+ - [angular wrapper](https://github.com/dtuit/Demo.IdentityServer.Cordova/blob/master/CordovaApp/www/app/ngOidcTokenManager.js) for oidc-token-manager
 
 tested to work on Android and Windows Phone 10
 
